@@ -11,8 +11,9 @@ void push(int data) {
         printf("Stack is full.");
     }
     else { //If stack is not FULL :
-        top += 1; //Increasing TOP.
-        arr[top] = data; //Defining the data.
+        //First increase TOP and then we can increase the new data.
+        top += 1;
+        arr[top] = data;
     }
 }
 
@@ -21,8 +22,8 @@ void pop() {
     if(top == -1){ //If TOP points -1, this means stack is empty.
         printf("Stack is already empty.");
     }
-    else {
-        top -= 1; //Decreasing TOP.
+    else { //If stack is not EMPTY :
+        top -= 1; //Decreasing TOP. And by that, removing the data.
     }
 }
 //Peek function just peeks the data. It does NOT remove it.
